@@ -124,7 +124,14 @@ namespace WinForm_ControlsAndGraphics
         }
         private void DrawDiagram(PaintEventArgs e, Point point, Brush brush, int h)
         {
-            e.Graphics.FillRectangle(brush, point.X, point.Y + 100, 50, h);
+            int width = 50;
+            if (goods.Count == 1)
+            {
+                int quantity = goods[0].Amount;
+                h = (int)(h * (quantity / 100.0));
+            }
+            int adjustedY = point.Y + 100 + (450 - h);
+            e.Graphics.FillRectangle(brush, point.X, adjustedY, width, h);
         }
         public static List<Color> ColorStructToList()
         {
