@@ -90,13 +90,14 @@
             // 
             // button1
             // 
-            button1.Location = new Point(69, 628);
+            button1.Location = new Point(69, 620);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(470, 48);
             button1.TabIndex = 3;
             button1.Text = "Print check";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
@@ -106,7 +107,7 @@
             panel1.Location = new Point(7, 321);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(565, 291);
+            panel1.Size = new Size(586, 291);
             panel1.TabIndex = 2;
             // 
             // button4
@@ -170,7 +171,7 @@
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(565, 305);
+            groupBox1.Size = new Size(586, 305);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Product";
@@ -313,7 +314,7 @@
             // 
             listOfGoods.FormattingEnabled = true;
             listOfGoods.ItemHeight = 20;
-            listOfGoods.Location = new Point(578, 0);
+            listOfGoods.Location = new Point(599, 0);
             listOfGoods.Margin = new Padding(3, 4, 3, 4);
             listOfGoods.Name = "listOfGoods";
             listOfGoods.Size = new Size(733, 724);

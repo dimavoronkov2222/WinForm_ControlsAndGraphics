@@ -8,6 +8,7 @@ namespace WinForm_ControlsAndGraphics
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("You can only have 12 different products and only 100 of one product", "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             NUD_Amount.BackColor = Color.DarkGray;
         }
         private void NameChanged(object sender, EventArgs e)
@@ -39,7 +40,6 @@ namespace WinForm_ControlsAndGraphics
         }
         private void AddGood_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (tb_GoodName.Text.Length == 0)
@@ -61,6 +61,10 @@ namespace WinForm_ControlsAndGraphics
                 if (dateTimePicker.Value > DateTime.Now)
                 {
                     throw new Exception("Date is in future");
+                }
+                if (listOfGoods.Items.Count >= 12)
+                {
+                    throw new Exception("Cannot add more than 12 goods");
                 }
                 var good = new Good(tb_GoodName.Text, tb_Desc.Text, (int)NUD_Amount.Value, decimal.Parse(tb_PricePerOne.Text), dateTimePicker.Value);
                 goods.Add(good);
@@ -114,14 +118,20 @@ namespace WinForm_ControlsAndGraphics
         }
         private void DrawCord(PaintEventArgs e)
         {
-            Random random = new Random();
-            e.Graphics.DrawLine(new Pen(Color.White, 2), new Point(100, 25), new Point(100, 500));
-            e.Graphics.DrawLine(new Pen(Color.White, 2), new Point(75, 475), new Point(875, 600));
-            e.Graphics.DrawString("0", new Font("Arial", 10), new SolidBrush(Color.White), new Point(75, 475));
+            e.Graphics.DrawLine(new Pen(Color.White, 2), new Point(100, 25), new Point(100, 600));
+            e.Graphics.DrawLine(new Pen(Color.White, 2), new Point(75, 575), new Point(1255, 575));
+            e.Graphics.DrawString("0", new Font("Arial", 10), new SolidBrush(Color.White), new Point(75, 575));
         }
         private void DrawDiagram(PaintEventArgs e, Point point, Brush brush, int h)
         {
-            e.Graphics.FillRectangle(brush, point.X, point.Y, 50, h);
+            int width = 50;
+            if (goods.Count == 1)
+            {
+                int quantity = goods[0].Amount;
+                h = (int)(h * (quantity / 100.0));
+            }
+            int adjustedY = point.Y + 100 + (450 - h);
+            e.Graphics.FillRectangle(brush, point.X, adjustedY, width, h);
         }
         public static List<Color> ColorStructToList()
         {
@@ -168,7 +178,20 @@ namespace WinForm_ControlsAndGraphics
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string path = "C:\\Users\\dimav\\OneDrive\\Робочий стіл\\check.txt";
+            List<string> goodsNamesAndPrices = new List<string>();
+            decimal totalSum = 0;
+            foreach (Good good in listOfGoods.Items)
+            {
+                goodsNamesAndPrices.Add(good.Name + " - " + good.PricePerOne.ToString());
+                totalSum += good.PricePerOne;
+            }
+            goodsNamesAndPrices.Add("Total sum: " + totalSum.ToString());
+            File.WriteAllLines(path, goodsNamesAndPrices);
+            MessageBox.Show("Saved in C:\\Users\\dimav\\OneDrive\\Робочий стіл\\check.txt", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
