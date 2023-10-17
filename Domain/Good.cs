@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace WinForm_ControlsAndGraphics.Domain
 {
     public class Good
@@ -14,7 +13,6 @@ namespace WinForm_ControlsAndGraphics.Domain
         public decimal PricePerOne { get; set; }
         public decimal TotalPrice { get; set; }
         public DateTime Date { get; set; }
-
         public Good(string name, string description, int amount, decimal pricePerOne, DateTime date)
         {
             Name = name;
@@ -24,7 +22,6 @@ namespace WinForm_ControlsAndGraphics.Domain
             Date = date;
             TotalPrice = amount * pricePerOne;
         }
-
         public override string ToString()
         {
             return $"{Name} : {Description}  |  {Amount} * {PricePerOne} = {TotalPrice}  |  {Date}";

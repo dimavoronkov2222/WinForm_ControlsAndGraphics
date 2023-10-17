@@ -116,7 +116,7 @@ namespace WinForm_ControlsAndGraphics
         {
             Random random = new Random();
             e.Graphics.DrawLine(new Pen(Color.White, 2), new Point(100, 25), new Point(100, 500));
-            e.Graphics.DrawLine(new Pen(Color.White, 2), new Point(75, 475), new Point(875, 475));
+            e.Graphics.DrawLine(new Pen(Color.White, 2), new Point(75, 475), new Point(875, 600));
             e.Graphics.DrawString("0", new Font("Arial", 10), new SolidBrush(Color.White), new Point(75, 475));
         }
         private void DrawDiagram(PaintEventArgs e, Point point, Brush brush, int h)

@@ -66,10 +66,11 @@
             tabControl.Controls.Add(tabHome);
             tabControl.Controls.Add(tabAnalitics);
             tabControl.ItemSize = new Size(200, 20);
-            tabControl.Location = new Point(2, 2);
+            tabControl.Location = new Point(2, 3);
+            tabControl.Margin = new Padding(3, 4, 3, 4);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(1178, 538);
+            tabControl.Size = new Size(1346, 717);
             tabControl.TabIndex = 0;
             // 
             // tabHome
@@ -80,19 +81,21 @@
             tabHome.Controls.Add(groupBox1);
             tabHome.Controls.Add(listOfGoods);
             tabHome.Location = new Point(4, 24);
+            tabHome.Margin = new Padding(3, 4, 3, 4);
             tabHome.Name = "tabHome";
-            tabHome.Padding = new Padding(3);
-            tabHome.Size = new Size(1170, 510);
+            tabHome.Padding = new Padding(3, 4, 3, 4);
+            tabHome.Size = new Size(1338, 689);
             tabHome.TabIndex = 0;
             tabHome.Text = "General";
             // 
             // button1
             // 
-            button1.Location = new Point(60, 471);
+            button1.Location = new Point(69, 628);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(411, 36);
+            button1.Size = new Size(470, 48);
             button1.TabIndex = 3;
-            button1.Text = "Друкувати чек";
+            button1.Text = "Print check";
             button1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -100,20 +103,22 @@
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Location = new Point(6, 241);
+            panel1.Location = new Point(7, 321);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(494, 218);
+            panel1.Size = new Size(565, 291);
             panel1.TabIndex = 2;
             // 
             // button4
             // 
             button4.BackColor = Color.OrangeRed;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(54, 141);
+            button4.Location = new Point(62, 188);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(411, 42);
+            button4.Size = new Size(470, 56);
             button4.TabIndex = 2;
-            button4.Text = "Видалити товар";
+            button4.Text = "Delete product";
             button4.UseVisualStyleBackColor = false;
             button4.Click += RomoveGoodFromList;
             // 
@@ -121,11 +126,12 @@
             // 
             button3.BackColor = Color.Orange;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(54, 75);
+            button3.Location = new Point(62, 100);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(411, 42);
+            button3.Size = new Size(470, 56);
             button3.TabIndex = 1;
-            button3.Text = "Змінити товар";
+            button3.Text = "Edit product";
             button3.UseVisualStyleBackColor = false;
             button3.Click += EditGoodItem;
             // 
@@ -133,11 +139,12 @@
             // 
             button2.BackColor = Color.LightGreen;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(54, 14);
+            button2.Location = new Point(62, 19);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(411, 42);
+            button2.Size = new Size(470, 56);
             button2.TabIndex = 0;
-            button2.Text = "Додати товар";
+            button2.Text = "Add product";
             button2.UseVisualStyleBackColor = false;
             button2.Click += AddGood_Click;
             // 
@@ -159,60 +166,62 @@
             groupBox1.Controls.Add(tb_GoodName);
             groupBox1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.Control;
-            groupBox1.Location = new Point(6, 6);
+            groupBox1.Location = new Point(7, 8);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(494, 229);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(565, 305);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Товар";
+            groupBox1.Text = "Product";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(17, 186);
+            label8.Location = new Point(40, 248);
             label8.Name = "label8";
-            label8.Size = new Size(52, 20);
+            label8.Size = new Size(53, 25);
             label8.TabIndex = 13;
-            label8.Text = "ДАТА";
+            label8.Text = "Data";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(5, 142);
+            label7.Location = new Point(29, 189);
             label7.Name = "label7";
-            label7.Size = new Size(140, 20);
+            label7.Size = new Size(130, 25);
             label7.TabIndex = 12;
-            label7.Text = "ЗАГАЛЬНА ЦІНА";
+            label7.Text = "General Price";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(181, 104);
+            label6.Location = new Point(207, 139);
             label6.Name = "label6";
-            label6.Size = new Size(105, 20);
+            label6.Size = new Size(179, 25);
             label6.TabIndex = 11;
-            label6.Text = "ЦІНА ЗА ШТ.";
+            label6.Text = "PRICE PER PIECE";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(5, 104);
+            label5.Location = new Point(29, 142);
             label5.Name = "label5";
-            label5.Size = new Size(91, 20);
+            label5.Size = new Size(80, 25);
             label5.TabIndex = 10;
-            label5.Text = "КІЛЬКІСТЬ";
+            label5.Text = "Amount";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(17, 68);
+            label4.Location = new Point(19, 91);
             label4.Name = "label4";
-            label4.Size = new Size(89, 20);
+            label4.Size = new Size(109, 25);
             label4.TabIndex = 9;
             label4.Text = "Description";
             // 
@@ -220,9 +229,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(25, 29);
+            label3.Location = new Point(29, 39);
             label3.Name = "label3";
-            label3.Size = new Size(51, 20);
+            label3.Size = new Size(64, 25);
             label3.TabIndex = 8;
             label3.Text = "Name";
             // 
@@ -230,77 +239,84 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(395, 141);
+            label2.Location = new Point(451, 188);
             label2.Name = "label2";
-            label2.Size = new Size(40, 20);
+            label2.Size = new Size(54, 25);
             label2.TabIndex = 7;
-            label2.Text = "ГРН";
+            label2.Text = "UAH";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(405, 104);
+            label1.Location = new Point(505, 139);
             label1.Name = "label1";
-            label1.Size = new Size(40, 20);
+            label1.Size = new Size(54, 25);
             label1.TabIndex = 6;
-            label1.Text = "ГРН";
+            label1.Text = "UAH";
             // 
             // NUD_Amount
             // 
             NUD_Amount.Enabled = false;
-            NUD_Amount.Location = new Point(107, 102);
+            NUD_Amount.Location = new Point(122, 136);
+            NUD_Amount.Margin = new Padding(3, 4, 3, 4);
             NUD_Amount.Name = "NUD_Amount";
-            NUD_Amount.Size = new Size(69, 29);
+            NUD_Amount.Size = new Size(79, 34);
             NUD_Amount.TabIndex = 5;
             NUD_Amount.ValueChanged += AmountChanged;
             // 
             // tb_PriceAll
             // 
             tb_PriceAll.Enabled = false;
-            tb_PriceAll.Location = new Point(151, 137);
+            tb_PriceAll.Location = new Point(173, 183);
+            tb_PriceAll.Margin = new Padding(3, 4, 3, 4);
             tb_PriceAll.Name = "tb_PriceAll";
-            tb_PriceAll.Size = new Size(238, 29);
+            tb_PriceAll.Size = new Size(271, 34);
             tb_PriceAll.TabIndex = 4;
             // 
             // dateTimePicker
             // 
-            dateTimePicker.Location = new Point(96, 179);
+            dateTimePicker.Location = new Point(110, 239);
+            dateTimePicker.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker.Name = "dateTimePicker";
-            dateTimePicker.Size = new Size(336, 29);
+            dateTimePicker.Size = new Size(383, 34);
             dateTimePicker.TabIndex = 3;
             // 
             // tb_PricePerOne
             // 
             tb_PricePerOne.Enabled = false;
-            tb_PricePerOne.Location = new Point(299, 102);
+            tb_PricePerOne.Location = new Point(392, 135);
+            tb_PricePerOne.Margin = new Padding(3, 4, 3, 4);
             tb_PricePerOne.Name = "tb_PricePerOne";
-            tb_PricePerOne.Size = new Size(101, 29);
+            tb_PricePerOne.Size = new Size(115, 34);
             tb_PricePerOne.TabIndex = 2;
             tb_PricePerOne.TextChanged += PricePerOneChanged;
             // 
             // tb_Desc
             // 
-            tb_Desc.Location = new Point(115, 67);
+            tb_Desc.Location = new Point(131, 89);
+            tb_Desc.Margin = new Padding(3, 4, 3, 4);
             tb_Desc.Name = "tb_Desc";
-            tb_Desc.Size = new Size(350, 29);
+            tb_Desc.Size = new Size(399, 34);
             tb_Desc.TabIndex = 1;
             // 
             // tb_GoodName
             // 
-            tb_GoodName.Location = new Point(82, 29);
+            tb_GoodName.Location = new Point(94, 39);
+            tb_GoodName.Margin = new Padding(3, 4, 3, 4);
             tb_GoodName.Name = "tb_GoodName";
-            tb_GoodName.Size = new Size(350, 29);
+            tb_GoodName.Size = new Size(399, 34);
             tb_GoodName.TabIndex = 0;
             tb_GoodName.TextChanged += NameChanged;
             // 
             // listOfGoods
             // 
             listOfGoods.FormattingEnabled = true;
-            listOfGoods.ItemHeight = 15;
-            listOfGoods.Location = new Point(506, 0);
+            listOfGoods.ItemHeight = 20;
+            listOfGoods.Location = new Point(578, 0);
+            listOfGoods.Margin = new Padding(3, 4, 3, 4);
             listOfGoods.Name = "listOfGoods";
-            listOfGoods.Size = new Size(642, 544);
+            listOfGoods.Size = new Size(733, 724);
             listOfGoods.TabIndex = 0;
             listOfGoods.SelectedValueChanged += SelectedValue;
             // 
@@ -309,9 +325,10 @@
             tabAnalitics.BackColor = Color.FromArgb(33, 33, 33);
             tabAnalitics.BorderStyle = BorderStyle.FixedSingle;
             tabAnalitics.Location = new Point(4, 24);
+            tabAnalitics.Margin = new Padding(3, 4, 3, 4);
             tabAnalitics.Name = "tabAnalitics";
-            tabAnalitics.Padding = new Padding(3);
-            tabAnalitics.Size = new Size(1170, 510);
+            tabAnalitics.Padding = new Padding(3, 4, 3, 4);
+            tabAnalitics.Size = new Size(1338, 689);
             tabAnalitics.TabIndex = 1;
             tabAnalitics.Text = "Analytics";
             tabAnalitics.ToolTipText = "Загальна сторінка інформації";
@@ -324,11 +341,12 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(33, 33, 33);
-            ClientSize = new Size(1180, 541);
+            ClientSize = new Size(1349, 721);
             Controls.Add(tabControl);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Foxstrot 2.0";
             tabControl.ResumeLayout(false);
